@@ -31,6 +31,7 @@ function deriveChildWallet(hdNodeWallet, index) {
     console.log(`Child wallet derived at index ${index}:`);
     console.log("Path:", childWallet.path);
     console.log("Address:", childWallet.address);
+    console.log("Private Key", childWallet.privateKey)
     return childWallet;
 }
 
