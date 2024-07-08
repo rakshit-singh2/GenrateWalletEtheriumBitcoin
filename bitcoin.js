@@ -19,8 +19,10 @@ const rootPublicKey = hdkey.publicExtendedKey.toString('hex');
 console.log("Root Private Key:", rootPrivateKey);
 console.log("Root Public Key:", rootPublicKey);
 
+const index = 0;
+
 // Derive a child key (example for one child)
-const derivePath = "m/44'/0'/0'/0/0"; // Example derivation path
+const derivePath = `m/44'/0'/0'/0/${index}`; // Example derivation path
 
 const keyDerive = hdkey.derive(derivePath);
 const derivedPrivateKey = keyDerive.privateExtendedKey.toString('hex');

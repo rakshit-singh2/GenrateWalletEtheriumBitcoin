@@ -17,9 +17,9 @@ const rootPrivateKey = hdWallet.privateExtendedKey();
 const rootPublicKey = hdWallet.publicExtendedKey();
 console.log("Root Private Key:", rootPrivateKey);
 console.log("Root Public Key:", rootPublicKey);
-
+const index = 0;
 // Derive a child key (example for one child)
-const derivePath = "m/44'/60'/0'/0/0"; // Ethereum derivation path
+const derivePath = `m/44'/60'/0'/0/${index}`; // Ethereum derivation path
 
 const childWallet = hdWallet.derivePath(derivePath).getWallet();
 const derivedPrivateKey = childWallet.getPrivateKeyString();
